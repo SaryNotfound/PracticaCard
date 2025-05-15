@@ -1,0 +1,141 @@
+/*box-sizing: border-box: hace que el ancho de
+ los elementos incluya el padding y el borde, evitando que se "rompa" el diseño. */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*padding: 2rem: espacio interno alrededor de todo el contenido
+ (2 rem ≈ 32px).*/
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #bdeaff;
+    color: #000000;
+    padding: 2rem;
+
+}
+
+header, footer{
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+footer{
+    margin-top: 2rem;
+    font-size: 0.8rem;
+    color: #666;
+}
+/*gap: espacio entre tarjetas.*/
+.contenedor-tarjetas {
+    display: flex;
+    gap: 1.5rem;
+    padding: 2rem;
+    background-color: #9fd1ff;
+    border-radius: 8px;
+    justify-content: center;
+   
+}
+
+.tarjeta{
+    background-color: aliceblue;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+    flex: 1; /* Permite que las tarjetas crezcan */
+    min-width: 250px; /* Ancho mínimo */
+    max-width: 300px; /* Ancho máximo */
+}
+
+.tarjeta:hover{
+    transform: translateY(-5px);
+
+}
+
+.tarjeta img{
+    width: 100%; /* Usa todo el ancho disponible de la tarjeta */
+    height: 200px; /* Alto específico */
+    object-fit: cover; /* Mantiene la proporción de la imagen */
+    border-radius: 8px;
+    display: block; /* Elimina espacios no deseados */
+    margin: 0 auto; /* Centra la imagen */
+}
+.tarjeta header, h1{
+    font-size: 3rem;
+    font-weight: bold;
+    color: #9b0000;
+}
+
+.tarjeta h2{
+    font-size: 1.5rem;
+    margin: 1rem 0;
+    color: #004d9b;
+}
+
+
+.tarjeta p{
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.5;
+}
+
+
+/* Media query para pantallas pequeñas */
+/*permite aplicar estilos solo si se cumple una condición del tamaño de la pantalla.*/
+@media (max-width: 768px) {
+    .contenedor-tarjetas {
+        flex-direction: column;
+        align-items: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1.5rem;
+        padding: 2rem;
+        background-color: #9fd1ff;
+        border-radius: 8px;
+    }
+    
+    .tarjeta {
+        width: 100%;
+        max-width: 280px;
+    }
+}
+
+@media (min-width: 900px) {
+  .card-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+
+.formulario-tarjeta {
+  margin-bottom: 2rem;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.formulario-tarjeta input[type="text"],
+.formulario-tarjeta textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 0.5rem;
+  box-sizing: border-box;
+}
+
+.formulario-tarjeta input[type="file"] {
+  margin-bottom: 0.5rem;
+}
+
+.formulario-tarjeta button {
+  padding: 8px 16px;
+  background: #004d9b;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.formulario-tarjeta button:hover {
+  background: #003974;
+}

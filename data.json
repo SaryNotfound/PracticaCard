@@ -1,0 +1,17 @@
+[
+  {
+    "nombre": "El churo",
+    "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatibus.",
+    "imagen": "images/churo.jpg"
+  },
+  {
+    "nombre": "El diome",
+    "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatibus.",
+    "imagen": "images/diome.jpg"
+  },
+  {
+    "nombre": "El pechy",
+    "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatibus.",
+    "imagen": "images/pechy.jpeg"
+  }
+]

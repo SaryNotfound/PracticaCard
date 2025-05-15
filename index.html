@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica de layout responsive</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <header>
+        <h1> Las leyendas vallenatas</h1>
+    </header>
+
+    <main>
+        <!-- formulario para crear tarjeta -->
+        <h2>Crea tu tarjeta</h2>
+        <form id="formulario-tarjeta" class="formulario-tarjeta">
+        <input type="text" id="nombre" placeholder="Nombre" required />
+        <textarea id="descripcion" placeholder="Descripción (máx 50 caracteres)" maxlength="50" required></textarea>
+        <input type="file" id="imagen" accept="image/*" required />
+        <button type="submit">Crear tarjeta</button>
+        </form>
+
+
+       <div class = "contenedor">
+         <section class = "contenedor-tarjetas">
+    <!--article es un contenedor independiente-->
+         
+        </section>
+
+       </div>
+    </main>
+
+    <!--usamos type="module" para permitir import/export.-->
+
+    <footer>
+        <p>
+            Creado por Sarita
+        </p>
+    </footer>
+
+</body>
+    <script type="module" src="script.js"></script>
+</html>
+
