@@ -28,9 +28,10 @@ footer{
 /*gap: espacio entre tarjetas.*/
 .contenedor-tarjetas {
     display: flex;
+    flex-wrap: wrap; /* ✅ Permite que se vayan a otra fila */
     gap: 1.5rem;
     padding: 2rem;
-    background-color: #9fd1ff;
+    background-color: #ff9fd4;
     border-radius: 8px;
     justify-content: center;
    
@@ -63,7 +64,7 @@ footer{
 .tarjeta header, h1{
     font-size: 3rem;
     font-weight: bold;
-    color: #9b0000;
+    color: #000000;
 }
 
 .tarjeta h2{
@@ -91,7 +92,7 @@ footer{
         justify-content: center;
         gap: 1.5rem;
         padding: 2rem;
-        background-color: #9fd1ff;
+        background-color: #9fffb7;
         border-radius: 8px;
     }
     
@@ -121,6 +122,8 @@ footer{
   padding: 8px;
   margin-bottom: 0.5rem;
   box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
 .formulario-tarjeta input[type="file"] {

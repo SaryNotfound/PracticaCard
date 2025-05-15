@@ -1,12 +1,15 @@
-// ✅ Seleccionamos el contenedor con el ID correcto
+//  Seleccionamos el contenedor con el ID correcto
 const contenedor = document.querySelector('.contenedor-tarjetas');
 const url = 'data.json';
 
-// ✅ Función para obtener datos usando async/await y fetch
-const obtenerDatos = async () => {
-  try {
-    const respuesta = await fetch(url);
-    const personas = await respuesta.json();
+// Función para obtener datos usando async/await y fetch
+const obtenerDatos = async () => { //async → marca que la función usará await.
+  try {   // Respuestas y peticiones JSON  forma de representar datos como texto.
+    const respuesta = await fetch(url); //fetch() → hace una petición (devuelve una promesa). // peticion json
+    const personas = await respuesta.json(); // await → espera que esa promesa se resuelva./ respuesta JSON convertida a objeto JS
+
+
+    //Desestructuración extrae propiedades de objetos o arrays fácilmente.
 
     personas.forEach(({ nombre, descripcion, imagen }) => {
       const tarjeta = crearTarjeta({ nombre, descripcion, imagen });
@@ -16,8 +19,8 @@ const obtenerDatos = async () => {
     console.error('Error al cargar los datos:', error);
   }
 };
-
-// ✅ Creamos las tarjetas con clases correctas
+//Arrow Functions (funciones flecha)
+//  Creamos las tarjetas con clases 
 const crearTarjeta = ({ nombre, descripcion, imagen }) => {
   const tarjeta = document.createElement('div');
   tarjeta.className = 'tarjeta';

@@ -15,8 +15,8 @@
         <!-- formulario para crear tarjeta -->
         <h2>Crea tu tarjeta</h2>
         <form id="formulario-tarjeta" class="formulario-tarjeta">
-        <input type="text" id="nombre" placeholder="Nombre" required />
-        <textarea id="descripcion" placeholder="Descripción (máx 50 caracteres)" maxlength="50" required></textarea>
+        <input type="text" id="nombre" placeholder="Nombre" required maxlength="20" required />
+        <textarea id="descripcion" placeholder="Descripción (máx 100 caracteres)" maxlength="100" required></textarea>
         <input type="file" id="imagen" accept="image/*" required />
         <button type="submit">Crear tarjeta</button>
         </form>
